@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-pink: #f8d7da;
+  --color-brand-mauve: #d6b4fc;
+  --color-brand-nude: #fdf5f2;
+  --color-brand-dark: #2d2d2d;
+  --color-brand-accent: #f48fb1;
+
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-nude text-brand-dark font-sans;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.btn-primary {
+  @apply bg-brand-accent text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-brand-accent/90 active:scale-95 shadow-lg shadow-brand-accent/20;
+}
+
+.btn-secondary {
+  @apply bg-white text-brand-accent border border-brand-accent px-8 py-3 rounded-full font-medium transition-all hover:bg-brand-pink/20 active:scale-95;
+}
+
+.card {
+  @apply bg-white rounded-3xl p-6 shadow-sm border border-brand-pink/30;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
